@@ -1,0 +1,1 @@
+The whole of Class Calc(): was open source and I have adapted it to work with a GUI which I have created.
