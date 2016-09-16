@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Set language to English -->
+<head>
+  <title>Bohdan Pike</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <!-- Uses some open source api from Google -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="main">Bohdan Pike</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+		<li class="active"><a href="speed">Speed Calculator</a></li>
+        <li><a href="plate">Plate Checker</a></li>
+        <li><a href="database">Database</a></li>
+		<li><a href="console">Console</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container">
+  <div class="jumbotron">
+    <h2>Speed Calculator</h2> <br> <!-- Title -->
+	Distance (Metres)<br>  <!-- Label -->
+	<input id="distance" type="number" min="0" value="0"> <!-- Create a numeral textbox with min value of 0 -->
+	<br> <br>
+	<input id="starttime" type="time" step="1" value="00:00"> Start Time (HH:MM:SS) <br> <!-- Create two more text boxes -->
+	<input id="finaltime" type="time" step="1" value="00:00"> Final Time (HH:MM:SS)
+	<br><br>
+	<p id="result"></p> <!-- This is a place holder for a label we will use later. -->
+	<input type="submit" onclick="output();">
+	</form>	
+	<script type="text/javascript" language="javascript" charset="utf-8">
+	
+	function output(){
+	var distance = parseInt(document.getElementById('distance').value);
+	var starttime = document.getElementById('starttime').value;
+	var finaltime = document.getElementById('finaltime').value;
+	var startdate = new Date("01/01/2007 " + starttime)
+	var finaldate = new Date("01/01/2007 " + finaltime)
+	if (finaldate < startdate) {
+		finaldate.setDate(finaldate.getDate() + 1);
+	}
+	var difference = ((finaldate - startdate) / 1000)
+    document.getElementById('result').innerHTML = "Speed = " + Math.round((distance / difference)*3.6) + " km/h or " + Math.round((distance / difference)*2.2369362920544) + " mph";
+}
+</script>
+  </div>
+
+    <div class="clearfix visible-lg"></div>
+  </div>
+</div>
+
+</body>
+</html>

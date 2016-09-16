@@ -1,0 +1,139 @@
+INFO:root:<br>Server version = 3<br>
+INFO:root:<br>Bohdan Pike's Python based webserver is now running on port 80... <br><br>
+DEBUG:root:<br>GET / HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Connection: keep-alive
+
+<br>
+DEBUG:root:<br>GET /speed HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Referer: http://localhost/
+Connection: keep-alive
+
+<br>
+INFO:root:<br>Sending page: ./HTML/speed.html<br><br>
+DEBUG:root:<br>GET /plate HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Referer: http://localhost/speed
+Connection: keep-alive
+
+<br>
+INFO:root:<br>Sending page: ./HTML/plate.html<br><br>
+DEBUG:root:<br>GET /speed HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Referer: http://localhost/plate
+Connection: keep-alive
+
+<br>
+INFO:root:<br>Sending page: ./HTML/speed.html<br><br>
+DEBUG:root:<br>GET /database HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Referer: http://localhost/speed
+Connection: keep-alive
+
+<br>
+INFO:root:<br>Sending page: ./HTML/database.html<br><br>
+DEBUG:root:<br>GET /plate HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Referer: http://localhost/database
+Connection: keep-alive
+
+<br>
+INFO:root:<br>Sending page: ./HTML/plate.html<br><br>
+DEBUG:root:<br>GET /database HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Referer: http://localhost/plate
+Connection: keep-alive
+
+<br>
+INFO:root:<br>Sending page: ./HTML/database.html<br><br>
+DEBUG:root:<br>GET /plate HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Referer: http://localhost/database
+Connection: keep-alive
+
+<br>
+INFO:root:<br>Sending page: ./HTML/plate.html<br><br>
+DEBUG:root:<br>POST /plate.php HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Referer: http://localhost/plate
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Content-Length: 14
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+
+plate=PPPPPPPP<br>
+INFO:root:<br>&nbsp&nbsp&nbsp&nbspInvalid plate infomation detected; PPPPPPPP
+DEBUG:root:<br>POST /plate.php HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Referer: http://localhost/plate
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Content-Length: 14
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+
+plate=PPPPPPPP<br>
+INFO:root:<br>&nbsp&nbsp&nbsp&nbspInvalid plate infomation detected; PPPPPPPP
+DEBUG:root:<br>GET /InvalidPlates.txt HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Referer: http://localhost/plate
+Connection: keep-alive
+
+<br>

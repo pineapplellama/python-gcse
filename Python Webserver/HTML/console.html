@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Set language to English -->
+<head>
+  <title>Bohdan Pike</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <!-- Uses some open source api from Google -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script>
+setInterval(function() {
+    $('#text-file-container').load('Latest.txt');
+}, 1000);
+</script>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="main">Bohdan Pike</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+		<li><a href="speed">Speed Calculator</a></li>
+        <li><a href="plate">Plate Checker</a></li>
+        <li><a href="database">Database</a></li>
+		<li class="active"><a href="console">Console</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+</div>
+<div id="text-file-container"></div>
+</body>
+</html>

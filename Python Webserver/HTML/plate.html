@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+var xmlhttp;
+if (window.XMLHttpRequest)
+ {// code for IE7+, Firefox, Chrome, Opera, Safari
+ xmlhttp=new XMLHttpRequest();
+ }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+  {
+alert('Invalid plate sent to server')
+ }
+}
+
+</script>
+  <title>Bohdan Pike</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="main">Bohdan Pike</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="speed">Speed Calculator</a></li>
+		<li class="active"><a href="plate">Plate Checker</a></li>
+        <li><a href="database">Database</a></li>
+		<li><a href="console">Console</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container">
+  <div class="jumbotron">
+    <h2><a href="InvalidPlates.txt">Number Plate Checker</a></h2><br>
+	Number Plate:<br>
+    <input id="plate" type="text" style='text-transform:uppercase' maxlength="8">
+    <input type="submit" onclick="output();">
+	<br><br>
+	<p id="result" ></p>
+    <script type="text/javascript" language="javascript" charset="utf-8">
+		function output(){
+			var plate = document.getElementById('plate').value;
+			if (plate.toUpperCase() == "") {
+				document.getElementById('result').innerHTML = "";
+			}
+			else if ( /[A-Z]{2}[0-9]{2} [A-Z]{3}/.test(plate.toUpperCase()) ) {
+				document.getElementById('result').innerHTML = "<font color=\"green\"> Number Plate is valid";
+			}
+			else {
+				document.getElementById('result').innerHTML = "<font color=\"red\"> Number Plate is invalid; Saving.";
+				xmlhttp.open("POST","plate.php",true);
+				xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				xmlhttp.send("plate=" + plate.toUpperCase());
+			}
+		}
+		
+		
+	</script>
+	
+  </div>
+
+    <div class="clearfix visible-lg"></div>
+  </div>
+</div>
+
+</body>
+</html>
